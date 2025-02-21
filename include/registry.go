@@ -54,7 +54,8 @@ func InboundRegistry() *inbound.Registry {
 	naive.RegisterInbound(registry)
 	shadowtls.RegisterInbound(registry)
 	vless.RegisterInbound(registry)
-
+        anytls.RegisterInbound(registry)
+	
 	registerQUICInbounds(registry)
 	registerStubForRemovedInbounds(registry)
 
@@ -81,7 +82,8 @@ func OutboundRegistry() *outbound.Registry {
 	ssh.RegisterOutbound(registry)
 	shadowtls.RegisterOutbound(registry)
 	vless.RegisterOutbound(registry)
-
+        anytls.RegisterOutbound(registry)
+	
 	registerQUICOutbounds(registry)
 	registerWireGuardOutbound(registry)
 	registerStubForRemovedOutbounds(registry)
